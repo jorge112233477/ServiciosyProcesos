@@ -7,7 +7,8 @@ public class ParkingJob extends Thread {
 	
 	// initialize the parking
 	// object through the constructor
-	public ParkingJob(aparcamientos parking1) {
+	public ParkingJob(aparcamientos parking1, String name) {
+		super(name);
 		Object parking;
 		this.parking = parking1;
 	}
@@ -20,6 +21,7 @@ public class ParkingJob extends Thread {
 		
 		
 	}
+	
 	
 	
 
