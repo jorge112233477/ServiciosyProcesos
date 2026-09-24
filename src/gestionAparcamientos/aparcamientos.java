@@ -21,6 +21,7 @@ public class aparcamientos {
     public synchronized void entrarCoche() {
         if (coches < capacidad) {
             coches++;
+            coches++;
             System.out.println("Entra un coche. Coches: " + coches);
         } else {
             System.out.println("Aparcamiento lleno");
