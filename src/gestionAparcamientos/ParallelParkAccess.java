@@ -10,11 +10,11 @@ public class ParallelParkAccess {
 		
 		
 		
-		aparcamientos parking1 = new aparcamientos("park1", "100", 500000000);
-		aparcamientos parking2 = new aparcamientos("park1", "100", 500000000);
+		aparcamientos parking1 = new aparcamientos("park1", "100", 1000000000);
+		aparcamientos parking2 = new aparcamientos("park1", "100", 1000000000);
 		
 		
-		int numOfThread = 100000;
+		int numOfThread = 2000;
 		Thread[] threads = new Thread[numOfThread];
 		
 		for (int i = 0; i < numOfThread; i++) {

@@ -17,7 +17,15 @@ public class ParkingJob extends Thread {
 	public void run() {
 		System.out.println("this is a parallel job");
 		System.out.println(parking);
-		parking.entrarCoche();
+		
+		
+		
+		
+		for (int i = 0; i < 200000; i++) {
+			parking.entrarCoche();
+
+		}
+		
 		
 		
 		
