@@ -14,7 +14,7 @@ public class ParallelParkAccess {
 		aparcamientos parking2 = new aparcamientos("park1", "100", 1000000000);
 		
 		
-		int numOfThread = 2000;
+		int numOfThread = 2;
 		Thread[] threads = new Thread[numOfThread];
 		
 		for (int i = 0; i < numOfThread; i++) {
@@ -39,11 +39,13 @@ public class ParallelParkAccess {
 			
 		}
 		
-		
-		
-		
+	
 		Thread t1 = new ParkingJob(parking1, "coche");
 		Thread t2 = new ParkingJob(parking1, "coche1");
+		
+		t1.start();
+		t2.start();
+		
 		try {
 			t1.join();
 		} catch (InterruptedException e) {
@@ -57,8 +59,7 @@ public class ParallelParkAccess {
 			e.printStackTrace();
 		}
 		
-		t1.start();
-		t2.start();
+		
 		
 		Empresa empresa1 = new Empresa("Manolo");
 		

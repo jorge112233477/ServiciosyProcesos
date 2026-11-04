@@ -21,7 +21,7 @@ public class ParkingJob extends Thread {
 		
 		
 		
-		for (int i = 0; i < 200000; i++) {
+		for (int i = 0; i < 8000; i++) {
 			parking.entrarCoche();
 
 		}
